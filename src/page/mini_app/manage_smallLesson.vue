@@ -1,0 +1,57 @@
+
+<template>
+    <div id="subpage">
+
+        <el-col :span="24" class="warp-breadcrum">
+            <el-breadcrumb separator="/">
+                <el-breadcrumb-item><b>小程序</b></el-breadcrumb-item>
+                <el-breadcrumb-item>小课管理</el-breadcrumb-item>
+            </el-breadcrumb>
+        </el-col>
+
+        <div class="content">
+            <div class="xcx-head">
+                <div>
+                    <span class="font14">关键词：</span>
+                    <el-input class="w251 font14" placeholder="请输入标题" v-model="keys" clearable> </el-input>
+                    <el-button class="mar_L_20" type="primary" @click="search()" plain>搜索</el-button>
+                </div>
+
+                <el-button type="primary" @click="add()">添加小课</el-button>
+            </div>
+            <div class="xcx-content">
+                <!--列表-->
+                <el-table border :data="tableData" stripe style="width: 100%">
+                    <el-table-column prop="title" label="小课名称"></el-table-column>
+                    <el-table-column prop="name" label="小课封面图" width="230">
+                        <div slot-scope="scope">
+                            <img class="img_smallLesson" :src="scope.row.cover" alt="">
+                        </div>
+                    </el-table-column>
+                    <el-table-column prop="is_end" label="是否完结"></el-table-column>
+                    <el-table-column prop="price" label="小课的费用"></el-table-column>
+                    <el-table-column prop="buy_count" label="购买人数"></el-table-column>
+                    <el-table-column prop="subscribe_count" label="订阅人数"></el-table-column>
+                    <el-table-column label="操作">
+                        <div slot-scope="scope" class="dis_fd font14">
+                            <span class="text primary" @click="Lesson_essay(scope.row)">小课文章</span>
+                            <span class="text success" @click="Lesson_essay_code(scope.row)">小课码</span>
+                            <span class="text primary" @click="edit(scope.row.id)">修改小课</span>
+                            <span class="text primary" @click="see_link(scope.row.id)">链接地址</span>
+                            <span class="text danger" @click="del_item(scope.row.id)">删除小课</span>
+                        </div>
+                    </el-table-column>
+                </el-table>
+                <!--分页-->
+                <div class="paging">
+                    <el-pagination class="left" @current-change="handleCurrentChange" :current-page="page" background layout="prev, pager, next" :total="count"></el-pagination>
+                    <span class="demonstration left">共 {{ count }} 条 每页10条</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+<script src="../../../static/js/mini_app/manage_smallLesson.js"></script>
+
+<style scoped>
+</style>

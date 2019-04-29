@@ -1,0 +1,74 @@
+/* 杂志封面-上传图片 */
+.Magazine_img {
+  line-height: normal;
+}
+
+.Magazine_img .el-upload.el-upload--picture-card {
+  background: #ffffff;
+  border: 1px dashed #d8dce6;
+  width: 128px;
+  height: 168px;
+  line-height: 178px;
+}
+
+.Magazine_img .el-upload-list__item-actions,
+.Magazine_img .el-upload-list__item-thumbnail,
+.Magazine_img .el-upload-list__item.is-success,
+.Magazine_img .el-upload-list__item.is-undefined,
+.Magazine_img .el-upload-list__item.is-uploading {
+  width: 128px;
+  height: 168px;
+}
+
+.Magazine_img .el-progress-circle {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+}
+
+.el-upload--picture-card {
+  margin-bottom: 15px;
+}
+
+/* 正方形 大封面 */
+.img_smallLesson {
+  width: 120px;
+  height: 120px;
+}
+
+/* 年度杂志封面 */
+.year_cover {
+  width: 115px;
+  height: 150px;
+}
+
+.Subscribe .el-tabs__nav-wrap::after {
+  width: 255px !important;
+}
+
+/* 小图标 */
+@font-face {
+  font-family: "iconfont";
+  /* project id 829532 */
+  src: url("//at.alicdn.com/t/font_829532_l80isl6kyx.eot");
+  src: url("//at.alicdn.com/t/font_829532_l80isl6kyx.eot?#iefix") format("embedded-opentype"),
+    url("//at.alicdn.com/t/font_829532_l80isl6kyx.woff") format("woff"),
+    url("//at.alicdn.com/t/font_829532_l80isl6kyx.ttf") format("truetype"),
+    url("//at.alicdn.com/t/font_829532_l80isl6kyx.svg#iconfont") format("svg");
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 14px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-iconstop:before {
+  content: "\e69d";
+}
+
+.vip_tabs.el-tabs.el-tabs--top {
+  width: 193px;
+}
